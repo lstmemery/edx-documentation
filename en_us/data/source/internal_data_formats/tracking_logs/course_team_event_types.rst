@@ -756,6 +756,49 @@ this event as they do for the :ref:`edx_grades_course_grade_calculated` event.
 * ``event_transaction_id``
 * ``event_transaction_type``
 
+.. _edx_grades_subsection_score_overriden:
+
+==========================================
+``edx.grades.subsection.score_overriden``
+==========================================
+
+This event will be emitted when a learner's subsection score has been
+overridden (currently, only the result of an admin rejecting a proctored exam
+attempt or transitioning it from rejected to verified).
+
+**Event Source**: Server
+
+**History**: Added XX Aug 2017.
+
+``event`` **Member Fields**:
+
+The ``edx.grades.subsection.score_overriden`` event includes the
+:ref:`common<context>` ``context`` member fields.
+
+The ``edx.grades.subsection.score_overriden`` event also includes the following
+``event`` member fields. These fields serve the same purpose for this event as
+they do for the :ref:`edx_grades_course_grade_calculated` and
+:ref:`edx_grades_problem_rescored` events.
+
+* ``problem_id``
+* ``event_transaction_id``
+* ``event_transaction_type``
+* ``only_if_higher``
+
+Additionally, the ``edx.grades.subsection.score_overriden`` event includes the
+following ``event`` member field.
+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+   * - ``override_deleted``
+     - Boolean
+     - If ``true``, a course staff member has deleted an automatic Studio
+       override of a learner's score.
 
 .. _instructor_enrollment:
 
