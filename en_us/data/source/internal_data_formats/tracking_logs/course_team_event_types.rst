@@ -756,10 +756,10 @@ this event as they do for the :ref:`edx_grades_course_grade_calculated` event.
 * ``event_transaction_id``
 * ``event_transaction_type``
 
-.. _edx_grades_subsection_score_overriden:
+.. _edx_grades_subsection_score_overridden:
 
 ==========================================
-``edx.grades.subsection.score_overriden``
+``edx.grades.subsection.score_overridden``
 ==========================================
 
 This event will be emitted when a learner's subsection score has been
@@ -772,12 +772,12 @@ attempt or transitioning it from rejected to verified).
 
 ``event`` **Member Fields**:
 
-The ``edx.grades.subsection.score_overriden`` event includes the
+The ``edx.grades.subsection.score_overridden`` event includes the
 :ref:`common<context>` ``context`` member fields.
 
-The ``edx.grades.subsection.score_overriden`` event also includes the following
-``event`` member fields. These fields serve the same purpose for this event as
-they do for the :ref:`edx_grades_course_grade_calculated` and
+The ``edx.grades.subsection.score_overridden`` event also includes the
+following ``event`` member fields. These fields serve the same purpose for this
+event as they do for the :ref:`edx_grades_course_grade_calculated` and
 :ref:`edx_grades_problem_rescored` events.
 
 * ``problem_id``
@@ -785,7 +785,7 @@ they do for the :ref:`edx_grades_course_grade_calculated` and
 * ``event_transaction_type``
 * ``only_if_higher``
 
-Additionally, the ``edx.grades.subsection.score_overriden`` event includes the
+Additionally, the ``edx.grades.subsection.score_overridden`` event includes the
 following ``event`` member field.
 
 .. list-table::
