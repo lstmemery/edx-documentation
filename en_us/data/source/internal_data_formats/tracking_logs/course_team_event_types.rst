@@ -800,8 +800,8 @@ following ``event`` member field.
      - Details
    * - ``override_deleted``
      - Boolean
-     - If ``true``, an edX support staff member has deleted an automatic Studio
-       override of a learner's score.
+     - If ``true``, an edX support staff member has deleted a previous override
+       of a learner's score.
 
 .. _instructor_enrollment:
 
