@@ -762,8 +762,9 @@ this event as they do for the :ref:`edx_grades_course_grade_calculated` event.
 ``edx.grades.subsection.score_overridden``
 ==========================================
 
-The server emits this event when a member of edX support staff overrides a
-learner's subsection score by performing one of the following actions.
+The server emits this event when a member of edX support staff overrides or
+removes the override of a learner's subsection score by performing one of the
+following actions.
 
 * Selecting "Suspicious" as the status of a proctored exam review.
 * Changing the status of a proctored exam review to from "Suspicious" to
