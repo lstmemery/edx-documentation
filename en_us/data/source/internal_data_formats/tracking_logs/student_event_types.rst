@@ -699,11 +699,6 @@ button is labelled **Resume Course** when learners return to a course that
 they have already started. Clicking **Resume Course** take a learner to the
 most recent location that they have accessed in the course.
 
-.. note:: A "start course" link previously existed on the deprecated **Course
-   Info** page. If this event is triggered from the deprecated page, the
-   ``event_type`` field is not included.
-
-
 **History**: Added August 11 2017.
 
 **Component**: LMS
@@ -740,6 +735,26 @@ member fields. For more information about these common fields, see :ref:`common`
      - The URL of the page in the course that the user visited most recently.
        In the case of users who accessed the course for the first time, this
        is the URL of the first page in the course.
+
+
+=============================================================================
+Example ``edx.course.home.resume_course.clicked`` Event
+=============================================================================
+
+The following example shows the relevant fields of the event that is emitted
+when a user clicks **Resume Course** or **Start Course** from the **Course**
+page in the LMS.
+
+.. code-block:: json
+
+ {
+     "name": "edx.ui.lms.link_clicked",
+     "event_type": "edx.ui.lms.link_clicked",
+     "event": {
+         "event_type": "resume",
+         "url": "/courses/course-v1:edX+DemoX+Demo_Course/courseware/48ecb924d7fe4b66a230137626bfa93e/",
+         }
+ }
 
 
 =============================================================================
