@@ -688,6 +688,61 @@ This section includes descriptions of the following events.
   :depth: 1
 
 =============================================================================
+``edx.course.home.resume_course.clicked``
+=============================================================================
+
+The browser emits this event when a user clicks the **Resume/Start Course**
+button on the **Course** page in the LMS. The button is labelled **Start
+Course** if a learner is accessing the course for the first time. Clicking the
+**Start Course** button takes a learner to the first unit in the course. The
+button is labelled **Resume Course** when learners return to a course that
+they have already started. Clicking **Resume Course** take a learner to the
+most recent location that they have accessed in the course.
+
+.. note:: A "start course" link previously existed on the deprecated **Course
+   Info** page. If this event is triggered from the deprecated page, the
+   ``event_type`` field is not included.
+
+
+**History**: Added August 11 2017.
+
+**Component**: LMS
+
+**Event Source**: Browser
+
+``event`` **Member Fields**:
+
+The ``edx.course.home.resume_course.clicked`` includes the following ``event``
+member fields. For more information about these common fields, see :ref:`common`.
+
+``event`` **Member Fields**:
+
+.. list-table::
+   :widths: 15 15 60
+   :header-rows: 1
+
+   * - Field
+     - Type
+     - Details
+
+   * - ``event_type``
+     - string
+
+     - ``start`` if the user clicked **Start Course**, ``resume`` if the user
+       clicked **Resume Course**.
+
+       .. note:: A "start course" link previously existed on the deprecated
+          **Course Info** page. If a user clicked the link from the deprecated
+          page, this ``event_type`` field is not included.
+
+   * - ``url``
+     - string
+     - The URL of the page in the course that the user visited most recently.
+       In the case of users who accessed the course for the first time, this
+       is the URL of the first page in the course.
+
+
+=============================================================================
 ``edx.ui.lms.link_clicked``
 =============================================================================
 
